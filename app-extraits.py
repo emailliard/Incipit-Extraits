@@ -105,7 +105,7 @@ def gh_ecrire_csv(path: str, df: pd.DataFrame, message: str, depot: str = "score
 
 @st.cache_data(ttl=30)
 def gh_lire_livres() -> list:
-    """Lit livres.xlsx depuis le dépôt courant (mis en cache 30 s)."""
+    """Lit livres_ext.xlsx depuis le dépôt courant (mis en cache 30 s)."""
     import io
     token, repo, branch = cfg("token"), cfg("repo"), cfg("branch")
     r = requests.get(gh_url(repo, LIVRES_PATH), headers=gh_headers(token),
